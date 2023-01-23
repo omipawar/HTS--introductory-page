@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    background: url(./assets/bg-intro-desktop.png), #ff7978;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    color: white;
+  }
+  /* @font-face {
+    font-family: Poppins;
+    src: url(https://fonts.google.com/specimen/Poppins);
+    font-weight: 400, 500, 600, 700;
+  } */
+  
+  .primary-red {
+    background-color: (hsl(0, 100%, 74%));
+  }
+  .primary-green {
+    background-color: hsl(154, 59%, 51%);
+  }
+  .accent {
+    background-color: hsl(248, 32%, 49%);
+  }
+  

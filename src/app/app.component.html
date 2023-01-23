@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 left-side">
+                <h1 class="font-weight-bold">
+                    Learn To Code By <br> Watching Others
+                </h1>
+                <span class="text-justify py-3">
+                    See how experienced developer solve problems in real time. <br>
+                    Watching scripted tutorials is great, but understanding how <br>
+                    developers thinks is invaluable.
+                </span>
+            </div>
+             <div class="col-lg-6 form-section">
+                <div class="card accent outer-shadow">
+                    <div class="card-body tryit text-center">
+                        <span class="text-light"><b>Try it free 7 days</b> then $20/mo. thereafter</span>
+                    </div>
+                </div>
+                <div class="card mt-3 outer-shadow">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="container">
+                       <form class="form" [formGroup]="claimTrialForm" (ngSubmit)="onSubmit()">
+                        <div class='col-lg-12 mt-1'>
+                            <input class="icon-rtl" [ngClass]="{'red': claimTrialForm.get('firstName')?.invalid && claimTrialForm.get('firstName')?.touched}" placeholder="First Name" formControlName="firstName">
+                            <span *ngIf="claimTrialForm.get('firstName')?.invalid && claimTrialForm.get('firstName')?.touched" class="validation-msg">*First Name cannot be empty</span>
+                        </div>
+                         <div class='col-lg-12 mt-1'>
+                            <input class="icon-rtl" [ngClass]="{'red': claimTrialForm.get('lastName')?.invalid && claimTrialForm.get('lastName')?.touched}" placeholder="Last Name" formControlName="lastName">
+                            <span *ngIf="claimTrialForm.get('lastName')?.invalid && claimTrialForm.get('lastName')?.touched" class="validation-msg">*Last Name cannot be empty</span>
+                        </div>
+                         <div class='col-lg-12 mt-1'>
+                            <input class="icon-rtl" [ngClass]="{'red': claimTrialForm.get('email')?.invalid && claimTrialForm.get('email')?.touched}" placeholder="Email Address" formControlName="email">
+                            <span *ngIf="claimTrialForm.get('email')?.invalid && claimTrialForm.get('email')?.touched" class="validation-msg">*Look like this is not an Email</span>
+                        </div>
+                         <div class='col-lg-12 mt-1'>
+                            <input type="password" class="icon-rtl" [ngClass]="{'red': claimTrialForm.get('password')?.invalid && claimTrialForm.get('password')?.touched}" placeholder="Password" formControlName="password">
+                            <span *ngIf="claimTrialForm.get('password')?.invalid && claimTrialForm.get('password')?.touched" class="validation-msg">*Password cannot be empty</span>
+                        </div>
+                         <div class='col-lg-12 mt-1'>
+                            <button type="submit" [disabled]="claimTrialForm.invalid" class="btn btn-success claim primary-green">CLAIM YOUR FREE TRIAL</button>
+                        </div>
+                        <div class='col-lg-12 mt-2'>
+                           <span class="terms">By clicking the button, You are aggreeing to our <b class="text-danger terms">Terms and Services</b></span>
+                        </div>
+                      </form>
+                      </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
