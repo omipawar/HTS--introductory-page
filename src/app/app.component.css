@@ -4,8 +4,11 @@
   flex-direction: column;
   justify-content: center;
 }
+.bold {
+  font-weight: bolder;
+}
 .form-section {
-  padding: 50px 50px;
+  padding: 70px 50px;
 }
 .icon-rtl {
   width: 100%;
